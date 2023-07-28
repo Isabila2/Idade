@@ -1,0 +1,75 @@
+header{
+    background-color: #76CFC0;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 5px solid #248F8D;
+    font-size: 45px;
+}
+
+#central{
+    width: 100%;
+}
+body {
+    border: 2px;
+    background-color: #ffffff;
+    text-align: center;
+    
+}
+
+.texto{
+    color: #1f192f;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #248F8D;
+}
+
+.botao {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: black;
+}
+
+
+*{
+  justify-content: center;
+}
+
+    .botone{
+        background-color: #76CFC0;
+        font-size: 20px;
+        font-family: 'inter';
+        font-weight: lighter;
+        height: 40px;
+        width: 200px;
+        border-radius: 15px;
+      
+    }
+
+    .botone:hover{
+        transform: scale(1.1);
+        transition: all 0.5s;
+    }
+
+    #nome{
+        background-color: #ffffff89 ;
+        height: 30px;
+        width: 400px;
+        border-radius: 10px;
+
+       
+    }
+   
+    #idade{
+        background-color: #ffffff89 ;
+        height: 30px;
+        width: 400px;
+        border-radius: 10px;
+    }
+   
+    #resultado{
+        color: #76CFC0;
+       
+    }
+
+   

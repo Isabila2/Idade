@@ -11,6 +11,21 @@
         var resultado;
         var nome;
 
+        function dado(){
+            nome = document.getElementById("nome").value;
+            resultado = document.getElementById("resultado");
+
+            if (nome == ""){
+                resultado = document.getElementById("resultado");
+                resultado.innerHTML = "Complete todas as informações!";
+            } else if (nome != ""){
+             return fase();
+            }
+
+        }
+
+       
+
         function fase() {
             idade = document.getElementById("idade").value;
             nome = document.getElementById("nome").value;
@@ -19,22 +34,26 @@
             if (idade <= 0) {
                 resultado = document.getElementById("resultado");
                 resultado.innerHTML = "</br>Valor incorreto";
-            } else if (idade < 12 ) {
+            } else if (idade < 12) {
                 document.getElementById("resultado").innerHTML = nome + "(" + idade + ")" + " é uma criança.";
             } else if (idade >= 12 && idade <= 20) {
                 resultado = document.getElementById("resultado");
                 resultado.innerHTML = nome + "(" + idade + ")" + " é um adolescente.";
-            } else if (idade >=21 && idade <= 64) {
+            } else if (idade >= 21 && idade <= 64) {
                 resultado = document.getElementById("resultado");
                 resultado.innerHTML = nome + "(" + idade + ")" + " é um(a) adulto(a).";
             } else if (idade >= 65 && idade <= 110) {
                 resultado = document.getElementById("resultado");
                 resultado.innerHTML = nome + "(" + idade + ")" + " é um(a) idoso(a).";
-            } 
+            } else if (idade >= 111) {
+                resultado = document.getElementById("resultado");
+                resultado.innerHTML = "Coloque uma idade válida...";
+            }
 
 
-        } 
-        
+
+        }
+
     </script>
 
 
@@ -42,21 +61,25 @@
 
 <body>
     <div class="texto">
-        <header>Fases da Vida Humana</header>
-        <h1>Qual é a sua fase?<br></h1>
+        <header>Classificação Por Idade
+        </header>
+        
+        <img src="images/central.png" id="central">
+
+     
 
     </div>
     <br><br>
     <div class="botao">
 
-        <label>Digite o seu nome:</label><br><br>
+        <label >Digite o nome:</label><br><br>
         <input type="text" id="nome" placeholder="Exemplo: Maria" /><br><br>
 
-        <label>Digite sua idade:</label><br><br>
+        <label >Digite a idade:</label><br><br>
         <input type="number" id="idade" placeholder="Exemplo: 10" /><br><br>
 
 
-        <input onclick="fase()" class="botone" type="submit" value="Descubra a sua fase" />
+        <input onclick="dado()" class="botone" type="submit" value="Avaliar a idade" />
 
 
         <br>
